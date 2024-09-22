@@ -1,3 +1,4 @@
+import area_de_batalha as batle
 import pygame
 import sys
 
@@ -56,7 +57,7 @@ def create_screen(background_color, button_text, button_action):
         pygame.display.flip()
 
 # Tela de Batalha
-def area_de_batalha():
+def area_de_batalha_BKP():
     def draw_card(x, y, color):
             pygame.draw.rect(screen, color, (x, y, 70, 100))
     global destino 
@@ -168,8 +169,8 @@ def main():
     while True:
         if current_screen == 'home':
             current_screen = create_screen(BLUE, "Começar", 'game')
-        elif current_screen == 'game':
-            current_screen = area_de_batalha()
+        elif current_screen == 'game':         
+            current_screen = batle.area_de_batalha()
 
 
 main()
